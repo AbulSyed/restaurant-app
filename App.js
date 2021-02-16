@@ -7,7 +7,8 @@ const navigator = createStackNavigator({
 }, {
   initialRouteName: 'Search',
   defaultNavigationOptions: {
-    title: 'Restaurant search'
+    title: 'Restaurant search',
+    cardStyle: { backgroundColor: '#fff' }
   }
 })
 
