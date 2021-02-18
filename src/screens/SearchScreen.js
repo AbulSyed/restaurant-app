@@ -15,7 +15,7 @@ const SearchScreen = () => {
                     term: searchTerm,
                     location: 'london',
                     limit: 50
-                } 
+                }
             });
             setData(response.data.businesses);
             setError(null);
