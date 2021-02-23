@@ -8,7 +8,7 @@ const SearchScreen = () => {
     const [term, setTerm] = useState('');
     const { data, error, searchApi } = useData();
 
-    const filterDataByPrice = (price) => {
+    const filterByPrice = (price) => {
         return data.filter(curr => {
             return curr.price === price;
         })
@@ -24,9 +24,9 @@ const SearchScreen = () => {
             <Text>Search screen</Text>
             <Text>{ data.length }</Text>
             { error && <Text>{ error }</Text> }
-            <DataList title="Cheap" data={ filterDataByPrice('£') } />
-            <DataList title="Mid" data={ filterDataByPrice('££') } />
-            <DataList title="Expensive" data={ filterDataByPrice('£££') } />
+            <DataList title="Cheap" data={ filterByPrice('£') } />
+            <DataList title="Mid" data={ filterByPrice('££') } />
+            <DataList title="Expensive" data={ filterByPrice('£££') } />
         </View>
      );
 }
