@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useData from '../hooks/useData';
 import DataList from '../components/DataList';
@@ -15,18 +15,18 @@ const SearchScreen = () => {
     }
 
     return ( 
-        <View>
+        <View style={{ flex: 1 }}>
             <SearchBar
                 term={ term }
                 onTermChange={ value => setTerm(value) }
                 onTermSubmit={ () => searchApi(term) }
             />
-            <Text>Search screen</Text>
-            <Text>{ data.length }</Text>
             { error && <Text>{ error }</Text> }
-            <DataList title="Cheap" data={ filterByPrice('£') } />
-            <DataList title="Mid" data={ filterByPrice('££') } />
-            <DataList title="Expensive" data={ filterByPrice('£££') } />
+            <ScrollView>
+                <DataList title="Cheap" data={ filterByPrice('£') } />
+                <DataList title="Mid" data={ filterByPrice('££') } />
+                <DataList title="Expensive" data={ filterByPrice('£££') } />
+            </ScrollView>
         </View>
      );
 }
