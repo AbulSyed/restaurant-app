@@ -15,7 +15,7 @@ const SearchScreen = () => {
     }
 
     return ( 
-        <View style={{ flex: 1 }}>
+        <>
             <SearchBar
                 term={ term }
                 onTermChange={ value => setTerm(value) }
@@ -27,7 +27,7 @@ const SearchScreen = () => {
                 <DataList title="Mid" data={ filterByPrice('££') } />
                 <DataList title="Expensive" data={ filterByPrice('£££') } />
             </ScrollView>
-        </View>
+        </>
      );
 }
 
