@@ -13,7 +13,7 @@ const DataList = ({ title, data, navigation }) => {
                 data={ data }
                 keyExtractor={ data => data.id }
                 renderItem={ ({ item }) => (
-                    <TouchableOpacity onPress={ () => navigation.navigate('Details') }>
+                    <TouchableOpacity onPress={ () => navigation.navigate('Details', { id: item.id }) }>
                         <DataDetails item={ item } />
                     </TouchableOpacity>
                 ) }
