@@ -11,7 +11,6 @@ const DetailsScreen = ({ navigation }) => {
         try {
             const response = await yelp.get(`/${id}`);
             setData(response.data);
-            console.log(response.data);
         }catch(error){
             setError(error.message);
             console.log(error.message);
