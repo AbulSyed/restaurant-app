@@ -33,7 +33,6 @@ const DetailsScreen = ({ navigation }) => {
                             <Image style={ styles.imageStyle } source={{ uri: item }} />
                         ) }
                     />
-
                 </View>
             ) }
             { error && <Text>{ error }</Text> }
