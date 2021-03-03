@@ -1,4 +1,4 @@
-## React native restaurant seach app
+## React native restaurant finder app
 Yelp api used to find restaurants
 
 ```javascript
